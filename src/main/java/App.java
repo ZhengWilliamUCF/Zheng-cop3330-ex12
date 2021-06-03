@@ -13,7 +13,7 @@ public class App {
         String Num1 = myApp.readPrinciple();
         String Num2 = myApp.readRate();
         String Num3 = myApp.readYears();
-        int principle = Integer.parseInt(Num1);
+        double principle = Double.parseDouble(Num1);
         double rate = Double.parseDouble(Num2);
         int years = Integer.parseInt(Num3);
         double convertRate = myApp.convertRate(rate);
@@ -45,7 +45,7 @@ public class App {
         return (rate/100);
     }
 
-    public double calcInterest(int principle, double rate, int years){
+    public double calcInterest(double principle, double rate, int years){
         return (principle * (1 + (rate * years)));
     }
 
